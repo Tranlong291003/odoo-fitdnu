@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View for phuong_tien -->
+        <record id="view_phuong_tien_form" model="ir.ui.view">
+            <field name="name">phuong_tien_form</field>
+            <field name="model">phuong_tien</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Phương Tiện</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="name"/>
+                            <field name="license_plate"/>
+                            <field name="vehicle_type"/>
+                            <field name="status"/>
+                            <field name="mileage"/>
+                            <field name="manufacture_year"/>
+                            <field name="manufacturer"/>
+                            <field name="image" widget="image"/>
+                            <field name="driver_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for phuong_tien -->
+        <record id="view_phuong_tien_tree" model="ir.ui.view">
+            <field name="name">phuong_tien_tree</field>
+            <field name="model">phuong_tien</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="license_plate"/>
+                    <field name="vehicle_type"/>
+                    <field name="status"/>
+                    <field name="mileage"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View for phuong_tien -->
+        <record model="ir.ui.view" id="phuong_tien_search">
+            <field name="model">phuong_tien</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="license_plate"/>
+                    <field name="vehicle_type"/>
+                    <field name="status"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action for phuong_tien -->
+        <record id="action_phuong_tien" model="ir.actions.act_window">
+            <field name="name">Phương Tiện</field>
+            <field name="res_model">phuong_tien</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="phuong_tien_search"/>
+        </record>
+    </data>
+</odoo>

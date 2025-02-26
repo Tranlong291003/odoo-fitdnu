@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "Quản Lý Điều Hành Giao Thông",
+    'summary': "Module quản lý điều hành phương tiện giao thông",
+    'description': """
+        Module giúp quản lý phương tiện, tài xế, lịch trình, bảo trì và nhiên liệu
+        trong hệ thống điều hành giao thông.
+    """,
+    'author': "My Company",
+    'website': "http://www.yourcompany.com",
+    'category': 'Operations',
+    'version': '1.0',
+    'depends': ['base'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/phuong_tien.xml',
+        'views/menu.xml',
+    ],
+    'demo': [
+        'demo/demo.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': True,
+}
