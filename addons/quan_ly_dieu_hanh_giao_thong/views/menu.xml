@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+            id="menu_root"
+            name="QLDHGT"
+            sequence="0"/>
+          
+        <menuitem name="Phương Tiện" 
+            id="menu_phuong_tien" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_phuong_tien"
+        />
+
+    </data>
+</odoo>
